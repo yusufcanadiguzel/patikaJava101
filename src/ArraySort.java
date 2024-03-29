@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraySort {
+    //Kullanıcıdan dizinin eleman sayısını ve elemanları alıp küçükten büyüğe doğru ekrana yazdıran program.
     static void arraySort(){
         int[] numbers;
         int arrayLenght;
