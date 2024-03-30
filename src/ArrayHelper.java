@@ -92,6 +92,7 @@ public class ArrayHelper {
         return -1;
     }
 
+    //Verilen dizi içerisindeki değerleri ve kaç kere tekrar ettiklerini matrix kullanarak ekrana yazdıran algoritma.
     static void repeatingFrequency(int[] numbers) {
         int[][] resultArray = new int[numbers.length][2];
         int currentIndex = 0;
@@ -117,6 +118,32 @@ public class ArrayHelper {
             if (resultArray[i][0] != 0) {
                 System.out.println(resultArray[i][0] + " sayısı " + resultArray[i][1] + " kere tekrar edildi.");
             }
+        }
+    }
+
+    //Verilen dizinin transpozunu oluşturan algoritma
+    static void transpose(int[][] array){
+        int[][] transpose = new int[array[1].length][array.length];
+
+        for (int i = 0; i < array.length; i++){
+            for (int j = 0; j < array[1].length; j++){
+                transpose[j][i] = array[i][j];
+            }
+        }
+
+        System.out.println("Matris: ");
+        printArray(array);
+        System.out.println("\nTranspoze: ");
+        printArray(transpose);
+    }
+
+    //Verilen iki boyutlu arrayı ekrana yazdırır
+    static void printArray(int[][] array){
+        for (int i = 0; i < array.length; i++){
+            for (int j = 0; j < array[1].length; j++){
+                System.out.print(array[i][j] + "\t");
+            }
+            System.out.println();
         }
     }
 }
